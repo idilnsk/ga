@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+class DesignSystemRadius {
+  static const double none = 0;
+  static const double xs = 4;
+  static const double sm = 8;
+  static const double md = 12;
+  static const double lg = 16;
+  static const double xl = 28;
+  static const double xxl = 32;
+  static const double full = 999;
+=======
 import 'package:flutter/material.dart';
 import 'package:groceries_app/ui/ui.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart';
@@ -91,4 +102,5 @@ Widget buildDesignSystemRadiusUseCase(BuildContext context) {
       ],
     ),
   );
+>>>>>>> 65584a9 (try)
 }
