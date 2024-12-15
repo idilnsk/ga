@@ -1,12 +1,6 @@
-name: groceries_app
-description: A demo application for Widgetbook and how to implement a design system from Figma.
-publish_to: "none"
-version: 1.0.0+1
-=======
 name: widgetbook_workspace
 publish_to: "none"
 version: 0.1.0
->
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
