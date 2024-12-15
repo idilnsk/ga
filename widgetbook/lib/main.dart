@@ -1,10 +1,4 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'app.dart';
-
-void main() {
-  runApp(const App());
-=======
 import 'package:groceries_app/l10n/app_localizations.dart';
 import 'package:groceries_app/ui/ui.dart';
 import 'package:widgetbook/widgetbook.dart';
@@ -98,5 +92,4 @@ class WidgetbookApp extends StatelessWidget {
       ],
     );
   }
->>>>>>> 65584a9 (try)
 }
