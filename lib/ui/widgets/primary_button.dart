@@ -19,7 +19,7 @@ class PrimaryButton extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(
         vertical: AppTheme.of(context).spacing.md,
-        horizontal: AppTheme.of(context).spacing.xl,
+        horizontal: AppTheme.of(context).spacing.xs,
       ),
       decoration: BoxDecoration(
         color: AppTheme.of(context).background.brand,
