@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-    "name": "groceries_app",
-    "short_name": "groceries_app",
-=======
     "name": "widgetbook_workspace",
     "short_name": "widgetbook_workspace",
->>>>>>> 65584a9 (try)
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
