@@ -22,8 +22,7 @@ class PrimaryButton extends StatelessWidget {
         horizontal: AppTheme.of(context).spacing.xl,
       ),
       decoration: BoxDecoration(
-        color: AppTheme.of(context).background.brand,
-
+       color: Colors.pink, 
         borderRadius: BorderRadius.circular(0),
       ),
       child: Row(
