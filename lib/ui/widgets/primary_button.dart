@@ -18,12 +18,11 @@ class PrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-        vertical: AppTheme.of(context).spacing.md,
+        vertical: AppTheme.of(context).spacing.sm,
         horizontal: AppTheme.of(context).spacing.xl,
       ),
       decoration: BoxDecoration(
-        color: AppTheme.of(context).background.brand,
-
+       color: Colors.pink, 
         borderRadius: BorderRadius.circular(0),
       ),
       child: Row(
