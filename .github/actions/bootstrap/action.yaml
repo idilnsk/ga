@@ -1,34 +1,28 @@
-name: Widgetbook Cloud Hosting
-on: push
+name: Bootstrap
+description: Bootstrap the app and Widgetbook, then build Widgetbook
 
-jobs:
-  widgetbook-cloud-hosting:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+runs:
+  using: composite
+  steps:
+    - name: Setup flutter
+      uses: subosito/flutter-action@v2
+      with:
+        channel: stable
 
-      - name: Setup flutter
-        uses: subosito/flutter-action@v2
-        with:
-            channel: stable
+    - name: Bootstrap App
+      shell: bash
+      run: |
+        flutter pub get
+        flutter gen-l10n
 
-      - name: Bootstrap App
-        run: |
-            flutter pub get
-            # Add any other steps needed to make your
-            # app widgets available for Widgetbook
+    - name: Bootstrap Widgetbook
+      working-directory: widgetbook
+      shell: bash
+      run: |
+        flutter pub get
+        dart run build_runner build -d
 
-      - name: Build Widgetbook
-        working-directory: widgetbook
-        run: |
-            flutter pub get
-            dart run build_runner build -d
-            flutter build web -t lib/main.dart
-
-      - name: Install Widgetbook CLI
-        run: dart pub global activate widgetbook_cli
-
-      - name: Push Widgetbook Build
-        working-directory: widgetbook
-        run: widgetbook cloud build push --api-key ${{WIDGETBOOK_API_KEY }}
+    - name: Build Widgetbook
+      working-directory: widgetbook
+      shell: bash
+      run: flutter build web
